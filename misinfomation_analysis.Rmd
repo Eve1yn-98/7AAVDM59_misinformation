@@ -15,4 +15,22 @@ library(ggplot2)
 misinfo_d <- read_csv('../data/life-under-lockdown-wave2-extract.csv')
 ```
 
+```{r}
+misinfo_d %>%
+  ggplot(aes(x = gender))+
+  geom_bar()
+```
 
+```{r}
+misinfo_d %>%
+  ggplot(aes(x = beliefs))+
+  geom_histogram(bins = 6)
+```
+```{r}
+mean(misinfo_d$beliefs)
+```
+```{r}
+misinfo_d %>%
+  filter(gender %in% c('Male', 'Female')) %>%
+  t.test(formula = beliefs ~ gender, data =.)
+```

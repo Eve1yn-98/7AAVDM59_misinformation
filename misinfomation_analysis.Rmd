@@ -91,3 +91,5 @@ misinfo_d %>%
     formula = ~ know_facebook_coded + beliefs, data = ., method = 'spearman')
 ```
 There was a statistically significant positive rank-order correlation between the amount of knowledge about coronavirus from Facebook and number of misinformation beliefs, r(498) = -.23, p < .001.
+
+
